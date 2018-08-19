@@ -1,6 +1,10 @@
 
-
-
+/**
+ * @file index.js
+ * @author tifa(zhanghongyan_bd@gmail.com)
+ *
+ * @since 2017/10/14
+ */
 
 const CHALK = require('chalk');
 
