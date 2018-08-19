@@ -53,7 +53,7 @@ module.exports = () => {
         let cloneInit = () => {
             let command = `git clone ${ROOT_URI}/baidu/bac/mis-sdk ${projectName}`;
 
-            PROGRESS.set('text', 'Finland SDK installing!')
+            PROGRESS.set('text', 'MIS SDK installing!')
                 .start();
 
             EXEC(command, (error, stdout, stderr) => {
@@ -62,7 +62,7 @@ module.exports = () => {
                 }
                 console.log(`\n\n ${stdout} \n`, `\n\n ${stderr} \n\n`);
 
-                PROGRESS.succeed('Finland sdk installed! \n')
+                PROGRESS.succeed('MIS sdk installed! \n')
                     .clear();
 
                 // npmInstall();
@@ -107,8 +107,9 @@ module.exports = () => {
 
             let publishCommand = `echo 'BUILD_SUBMITTER -u . -x -e FIS -m ${purePath} -c "cd ${purePath} && sh`;
             command.push(`cd ${projectName}`);
-            command.push(`${publishCommand} build.sh prod"' > BCLOUD`);
-            command.push('git commit -m "init finland sdk"');
+            command.push(`${publishCommand} build.sh"' > BCLOUD`);
+            command.push('git add BCLOUD BCLOUD.qa');
+            command.push('git commit -m "init MIS sdk"');
 
             PROGRESS.set('text', 'Create build file... \n')
                 .start();
