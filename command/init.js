@@ -108,8 +108,9 @@ module.exports = () => {
             let publishCommand = `echo 'BUILD_SUBMITTER -u . -x -e FIS -m ${purePath} -c "cd ${purePath} && sh`;
             command.push(`cd ${projectName}`);
             command.push(`${publishCommand} build.sh"' > BCLOUD`);
-            command.push('git add BCLOUD BCLOUD.qa');
+            command.push('git add BCLOUD');
             command.push('git commit -m "init MIS sdk"');
+            command.push('git remote rm origin');
 
             PROGRESS.set('text', 'Create build file... \n')
                 .start();
