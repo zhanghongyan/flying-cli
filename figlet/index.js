@@ -23,4 +23,4 @@ console.log(CHALK.yellow(`\n Version: ${process.env.npm_package_version}`));
 
 console.log(CHALK.gray(`\n ${FLYING_CLI.join('\n')} \n`));
 
-console.log(CHALK.yellow(`\n fin-cli installed \n`));
+console.log(CHALK.yellow(`\n flying-cli installed \n`));
