@@ -1,0 +1,24 @@
+/**
+ * @file <% name %>.js
+ * @author <% author %>(<% email %>@baidu.com)
+ *
+ * @since <% ENV.TIME_STRING_CN %>
+ */
+
+import * as React from 'react';
+
+class <% name %> extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+
+        }
+    }
+
+    render() {
+    
+    }
+}
+
+export default  <% name %>;

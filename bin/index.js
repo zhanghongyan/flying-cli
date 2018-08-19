@@ -25,7 +25,6 @@ if (!FS.existsSync(USER.flyrc)) {
 PROGRAM
     .version(require('../package').version );
 
-
 PROGRAM
     .command('init')
     .option('-u, --uri <string>', 'icode Uri')
@@ -35,4 +34,32 @@ PROGRAM
     .action(() => {
         require('../command/init')();
     });
+
+PROGRAM
+    .command('create')
+    .option('-t, --type <string>', 'create')
+    .description('Generate a new `fly` unit [component]')
+    .alias('c')
+    .action(() => {
+        require('../command/create')();
+    });
+
+PROGRAM
+    .command('config')
+    .option('-e, --email <string>', 'email prefix')
+    .option('-a, --author <string>', 'author name')
+    .option('-N, --pName <string>', 'project name(`local work space` or `git dir`)')
+    .option('-I, --pId <string>', 'project id')
+    .option('-l, --list [boolean]', 'list config')
+    .description('Generate fin user config')
+    .alias('C')
+    .action(() => {
+        require('../command/config')();
+    });
+
+PROGRAM.parse(process.argv);
+
+if (!PROGRAM.args.length) {
+    PROGRAM.help();
+}
  

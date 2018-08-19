@@ -1,24 +1,11 @@
 {
-  "name": "flying-cli",
-  "version": "1.0.2",
-  "description": "A nodejs command line tool for MIS",
   "bin": {
     "fly": "bin/index.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node ./figlet/index.js --harmory"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhanghongyan/flying-cli.git"
-  },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/zhanghongyan/flying-cli/issues"
   },
-  "homepage": "https://github.com/zhanghongyan/flying-cli#readme",
+  "bundleDependencies": false,
   "dependencies": {
     "chalk": "^2.4.1",
     "co": "^4.6.0",
@@ -31,7 +18,22 @@
     "http-proxy": "^1.17.0",
     "ip": "^1.1.5",
     "js-yaml": "^3.12.0",
+    "ora": "^3.0.0",
     "string": "^3.3.3"
   },
-  "license": "ISC"
+  "deprecated": false,
+  "description": "A nodejs command line tool for MIS",
+  "homepage": "https://github.com/zhanghongyan/flying-cli#readme",
+  "license": "ISC",
+  "name": "flying-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhanghongyan/flying-cli.git"
+  },
+  "author": "tifa",
+  "scripts": {
+    "postinstall": "node ./figlet/index.js --harmory",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.1.2"
 }
