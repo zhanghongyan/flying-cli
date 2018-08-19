@@ -1,8 +1,10 @@
 {
   "name": "flying-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A nodejs command line tool for MIS",
-  "bin": "bin/index.js",
+  "bin": {
+    "fly": "bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "node ./figlet/index.js --harmory"
